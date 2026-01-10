@@ -1,4 +1,4 @@
-package StrategyPattern;
+package StrategyPattern.Duck;
 
 public class DuckSimulator {
     public static void main(String[] args) {
