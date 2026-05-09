@@ -1,7 +1,13 @@
 package ObserverPattern.WeatherStation;
 
+/**
+ * OBSERVER PATTERN: A Concrete Observer
+ * 
+ * This observer simply logs every update it receives to the console.
+ */
 public class Logger implements Observer {
     public Logger(WeatherStationInterface weatherStation){
+        // Registering with the subject
         weatherStation.registerObserver(this);
     }
 

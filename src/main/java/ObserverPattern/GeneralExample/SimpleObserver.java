@@ -1,5 +1,8 @@
 package ObserverPattern.GeneralExample;
 
+/**
+ * OBSERVER PATTERN: A Concrete Observer
+ */
 public class SimpleObserver implements Observer {
 
     private int value;
@@ -7,6 +10,7 @@ public class SimpleObserver implements Observer {
 
     public SimpleObserver(Subject simpleSubject){
         this.simpleSubject = simpleSubject;
+        // Register this observer with the subject
         simpleSubject.registerObserver(this);
     }
 
@@ -14,9 +18,9 @@ public class SimpleObserver implements Observer {
     public void update(int value){
         this.value = value;
         display();
-
     }
+
      public void display(){
-        System.out.println("Value : "+ value);
+        System.out.println("Current Value : "+ value);
      }
 }

@@ -1,12 +1,12 @@
 package DecoratorPattern.PizzaShop;
 
+/**
+ * DECORATOR PATTERN: A Concrete Component
+ */
 public class ThinCrustPizza extends Pizza{
 
     public ThinCrustPizza() {
         description = "Thin Crust Pizza";
-    }
- public String getDescription(){
-return description;
     }
 
     public double cost(){

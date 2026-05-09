@@ -1,7 +1,10 @@
 package DecoratorPattern.PizzaShop;
 
+/**
+ * DECORATOR PATTERN: The Abstract Component
+ */
 public abstract class Pizza {
-    String description = "Unkown Pizza";
+    String description = "Unknown Pizza";
 
     public String getDescription(){
         return description;

@@ -3,6 +3,11 @@ package IteratorPattern;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ITERATOR PATTERN: A Concrete Aggregate
+ * 
+ * This menu uses an ArrayList to store its items.
+ */
 public class PancakeHouseMenu implements Menu {
     List<MenuItem> menuItems;
 
@@ -20,7 +25,7 @@ public class PancakeHouseMenu implements Menu {
 
     @Override
     public Iterator createIterator() {
-        // We wrap the existing ArrayList iterator in our custom Iterator interface
+        // We wrap the existing List in our custom PancakeHouseIterator
         return new PancakeHouseIterator(menuItems);
     }
 }

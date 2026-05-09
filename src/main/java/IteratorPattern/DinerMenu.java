@@ -1,5 +1,10 @@
 package IteratorPattern;
 
+/**
+ * ITERATOR PATTERN: A Concrete Aggregate
+ * 
+ * This menu uses a fixed-size Array (MenuItem[]) to store its items.
+ */
 public class DinerMenu implements Menu{
 
     static final int MAX_ITEMS = 6;
@@ -8,8 +13,8 @@ public class DinerMenu implements Menu{
 
     public DinerMenu(){
         menuItems = new MenuItem[MAX_ITEMS];
-        addItem("Vegeterian Biryani", 4.99);
-        addItem("Soup of the Dayy", 2.99);
+        addItem("Vegetarian Biryani", 4.99);
+        addItem("Soup of the Day", 2.99);
     }
     
     public void addItem(String name, double price){
@@ -19,9 +24,12 @@ public class DinerMenu implements Menu{
         }
     }
 
+    /**
+     * Every menu must implement createIterator() so the client 
+     * doesn't have to know if it's an Array or a List.
+     */
     @Override
     public Iterator createIterator(){
-return new DinerMenuIterator(menuItems);
+        return new DinerMenuIterator(menuItems);
     }
-    
 }

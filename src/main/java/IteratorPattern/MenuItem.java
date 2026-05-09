@@ -1,5 +1,10 @@
 package IteratorPattern;
 
+/**
+ * ITERATOR PATTERN: The Data Object
+ * 
+ * A simple class to hold the information for one menu item.
+ */
 public class MenuItem {
     String name;
     double price;

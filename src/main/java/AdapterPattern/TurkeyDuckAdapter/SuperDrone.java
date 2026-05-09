@@ -1,5 +1,10 @@
 package AdapterPattern.TurkeyDuckAdapter;
 
+/**
+ * ADAPTER PATTERN: A Concrete Adaptee (SuperDrone)
+ * 
+ * This is a specific type of Drone that we want to use as a Duck.
+ */
 public class SuperDrone implements Drone{
 
     public void beep(){
@@ -11,7 +16,6 @@ public class SuperDrone implements Drone{
     }
     
     public void take_off(){
-                System.out.println("Taking off booozz");
-
+        System.out.println("Taking off booozz");
     }
 }

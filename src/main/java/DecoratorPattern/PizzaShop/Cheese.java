@@ -1,24 +1,20 @@
 package DecoratorPattern.PizzaShop;
 
-
+/**
+ * DECORATOR PATTERN: A Concrete Decorator (Topping)
+ */
 public class Cheese extends PizzaToppings {
 
-Pizza pizza;
+    public Cheese(Pizza pizza){
+        this.pizza = pizza;
+    }
 
-public Cheese(Pizza pizza){
-    this.pizza = pizza;
+    public String getDescription(){
+        return pizza.getDescription() + " With Cheese";
+    }
 
-}
-
-public String getDescription(){
-
-    return pizza.getDescription() + " With Cheese";
-}
-
-public double cost(){
-
-    return pizza.cost() + 1.99;
-}
-
-
+    public double cost(){
+        // Add $1.99 for cheese
+        return pizza.cost() + 1.99;
+    }
 }

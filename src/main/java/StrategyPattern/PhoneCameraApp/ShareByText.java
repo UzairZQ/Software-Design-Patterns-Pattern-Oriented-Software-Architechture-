@@ -1,5 +1,8 @@
 package StrategyPattern.PhoneCameraApp;
 
+/**
+ * STRATEGY PATTERN: A Concrete Strategy
+ */
 public class ShareByText implements SharingBehavior {
     @Override
     public void share() {

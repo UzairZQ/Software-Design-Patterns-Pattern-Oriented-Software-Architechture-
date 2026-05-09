@@ -1,12 +1,18 @@
 package ObserverPattern.WeatherStation;
 
-
+/**
+ * OBSERVER PATTERN: A Concrete Observer
+ * 
+ * This observer represents a User Interface that displays the current 
+ * weather data. Every time an update comes in, it calls display().
+ */
 public class UserInterface implements Observer{
     private double temperature;
     private double windSpeed;
     private double pressure;
 
     public UserInterface(WeatherStationInterface weatherStation){
+        // Registering with the subject
         weatherStation.registerObserver(this);
     }
 

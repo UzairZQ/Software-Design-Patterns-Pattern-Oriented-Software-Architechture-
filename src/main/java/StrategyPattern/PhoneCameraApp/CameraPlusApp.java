@@ -1,8 +1,12 @@
 package StrategyPattern.PhoneCameraApp;
 
+/**
+ * STRATEGY PATTERN: A Concrete Context
+ */
 public class CameraPlusApp extends PhoneCameraApp {
 
     public CameraPlusApp() {
+        // This app uses 'Email' sharing by default.
         sharingBehavior = new ShareByEmail();
     }
 

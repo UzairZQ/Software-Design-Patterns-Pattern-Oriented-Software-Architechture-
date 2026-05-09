@@ -1,8 +1,12 @@
 package StrategyPattern.PhoneCameraApp;
 
+/**
+ * STRATEGY PATTERN: A Concrete Context
+ */
 public class BasicCameraApp extends PhoneCameraApp {
 
     public BasicCameraApp() {
+        // We set the sharing behavior to 'Text' for the basic app.
         sharingBehavior = new ShareByText();
     }
 
@@ -20,8 +24,4 @@ public class BasicCameraApp extends PhoneCameraApp {
     public void savePhoto() {
         System.out.println("Saving photo with basic camera app.");
     }
-
-    
-
-  
 }

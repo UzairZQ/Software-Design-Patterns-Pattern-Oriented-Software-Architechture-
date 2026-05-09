@@ -1,5 +1,11 @@
 package ObserverPattern.WeatherStation;
 
+/**
+ * OBSERVER PATTERN: A Concrete Observer
+ * 
+ * This observer watches for "extreme" weather values and prints 
+ * an ALERT message if a threshold is crossed.
+ */
 public class Alert implements Observer {
     private WeatherStationInterface weatherStation;
     private double tempThreshold = 35.0;
@@ -8,6 +14,7 @@ public class Alert implements Observer {
 
     public Alert(WeatherStationInterface weatherStation){
         this.weatherStation = weatherStation;
+        // The observer registers ITSELF with the subject in its constructor.
         weatherStation.registerObserver(this);
     }
 

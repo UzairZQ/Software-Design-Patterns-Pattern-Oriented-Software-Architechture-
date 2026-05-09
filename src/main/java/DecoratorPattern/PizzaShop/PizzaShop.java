@@ -1,16 +1,19 @@
 package DecoratorPattern.PizzaShop;
 
+/**
+ * DECORATOR PATTERN: The Client
+ */
 public class PizzaShop {
     public static void main(String[] args) {
-        Pizza mythinPizza = new ThinCrustPizza();
+        // 1. Start with a simple pizza
+        Pizza thinPizza = new ThinCrustPizza();
         
-        mythinPizza = new Cheese(mythinPizza);
-        mythinPizza = new Pepper(mythinPizza);
-        mythinPizza = new Olives(mythinPizza);
+        // 2. Wrap it in multiple decorators (toppings)
+        thinPizza = new Cheese(thinPizza);
+        thinPizza = new Pepper(thinPizza);
+        thinPizza = new Olives(thinPizza);
 
-
-System.out.println(mythinPizza.getDescription() + " $ " + mythinPizza.cost());
-
+        // 3. Output the final description and total cost
+        System.out.println(thinPizza.getDescription() + " $ " + thinPizza.cost());
     }
-    
 }
