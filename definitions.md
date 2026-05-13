@@ -30,6 +30,12 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Our Example**: Starting with a `DarkRoast` (Beverage) and wrapping it in `Mocha` and `Whip` (Decorators) to calculate the total cost.
 - **HFDP Quote**: "Classes should be open for extension, but closed for modification."
 
+### 4. Composite Pattern
+- **Definition**: Allows you to compose objects into tree structures to represent part-whole hierarchies.
+- **Simple Words**: It lets you treat individual objects (Leaf) and groups of objects (Composite) exactly the same.
+- **Our Example**: A `Menu` (Composite) can contain `MenuItem` (Leaf) OR other `Menu`s (Sub-menus). The `Waitress` just calls `print()` on the root.
+- **HFDP Quote**: "The Composite Pattern allows clients to treat individual objects and compositions of objects uniformly."
+
 ---
 
 ## ⚙️ Behavioral Patterns
@@ -75,3 +81,4 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Want to loop through different collection types?** -> Iterator
 - **Want to decouple the requester from the doer?** -> Command
 - **Want to hide the mess of object creation?** -> Factory
+- **Want to treat groups and individuals the same?** -> Composite
