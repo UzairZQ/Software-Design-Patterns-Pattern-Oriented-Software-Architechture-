@@ -13,6 +13,12 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Our Example**: `SimplePizzaFactory` decides whether to create a `CheesePizza` or `VeggiePizza`. The `PizzaStore` doesn't care how it's made!
 - **HFDP Quote**: "Encapsulate what varies." (In this case, object creation).
 
+### 2. Abstract Factory Pattern
+- **Definition**: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+- **Simple Words**: It's like a specialized ingredient supplier. The `PizzaStore` asks the factory for "Dough" and "Cheese," and the factory handles giving the right regional versions (NY vs. Chicago).
+- **Our Example**: `NYPizzaIngredientFactory` provides `ThinCrustDough` and `ReggianoCheese`.
+- **HFDP Quote**: "Abstract Factory provides an interface for creating families of related objects."
+
 ---
 
 ## 🏛️ Structural Patterns
@@ -82,3 +88,4 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Want to decouple the requester from the doer?** -> Command
 - **Want to hide the mess of object creation?** -> Factory
 - **Want to treat groups and individuals the same?** -> Composite
+- **Want to create a family of related products?** -> Abstract Factory
