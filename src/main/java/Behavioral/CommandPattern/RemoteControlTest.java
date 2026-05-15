@@ -20,11 +20,11 @@ public class RemoteControlTest {
         remote.setCommand(lightOn);
 
         // 5. Press the button!
-        remote.buttonWasPressed();
+        remote.pressButton();
 
         LightOffCommand lightOff = new LightOffCommand(light);
         remote.setCommand(lightOff);
-        remote.buttonWasPressed();
+        remote.pressButton();
 
     }
 }

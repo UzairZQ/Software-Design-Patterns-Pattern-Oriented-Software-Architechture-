@@ -77,6 +77,12 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Our Example**: `CaffeineBeverage` has the recipe for making a drink (Boil -> Brew -> Pour -> Add Condiments). `Tea` and `Coffee` just provide the specific `brew()` and `addCondiments()` logic.
 - **HFDP Quote**: "The Template Method defines the steps of an algorithm and allows subclasses to provide the implementation for one or more steps."
 
+### 9. Chain of Responsibility Pattern
+- **Definition**: Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+- **Simple Words**: It's like a corporate email filter. If the "Spam" filter doesn't catch it, it goes to "Complaints." If that doesn't catch it, it goes to "Fan Mail."
+- **Our Example**: An `Email` is passed through a chain of `Handler`s (`SpamHandler` -> `ComplaintHandler` -> `FanHandler`).
+- **HFDP Quote**: "Chain of Responsibility allows a set of objects to handle a request, with the request passed along the chain until an object handles it."
+
 ---
 
 ### 🎓 Exam Cheat Sheet
@@ -89,3 +95,4 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Want to hide the mess of object creation?** -> Factory
 - **Want to treat groups and individuals the same?** -> Composite
 - **Want to create a family of related products?** -> Abstract Factory
+- **Want to give multiple objects a chance to handle a request?** -> Chain of Responsibility
