@@ -19,6 +19,12 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Our Example**: `NYPizzaIngredientFactory` provides `ThinCrustDough` and `ReggianoCheese`.
 - **HFDP Quote**: "Abstract Factory provides an interface for creating families of related objects."
 
+### 3. Singleton Pattern
+- **Definition**: Ensures a class has only one instance, and provides a global point of access to it.
+- **Simple Words**: It's a way to create an object that can only be instantiated once. Everyone who asks for it gets the exact same copy.
+- **Our Example**: The `ChocolateBoiler` ensures that we don't accidentally create two boilers and start boiling empty tanks or draining unboiled chocolate. We used "Double-Checked Locking" to make it safe for multiple threads.
+- **HFDP Quote**: "The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it."
+
 ---
 
 ## 🏛️ Structural Patterns
@@ -96,3 +102,4 @@ This guide summarizes the design patterns implemented in this project, categoriz
 - **Want to treat groups and individuals the same?** -> Composite
 - **Want to create a family of related products?** -> Abstract Factory
 - **Want to give multiple objects a chance to handle a request?** -> Chain of Responsibility
+- **Want to ensure only one instance of an object exists?** -> Singleton

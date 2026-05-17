@@ -24,5 +24,8 @@ public class DuckSimulator {
         System.out.println("\nChanging RubberDuck behavior at runtime...");
         rubberDuck.setQuackBehavior(new MuteQuack());
         rubberDuck.performQuack();
+
+        mallard.performFly();
+        mallard.performQuack();
     }
 }
